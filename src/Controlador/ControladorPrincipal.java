@@ -12,16 +12,21 @@ import Vista.VistaPizzeria;
  * @author Usuario
  */
 public class ControladorPrincipal {
+
     VistaPizzeria vistaPrincipal;
 
     public ControladorPrincipal(VistaPizzeria vistapizzeria) {
         this.vistaPrincipal = vistapizzeria;
         vistapizzeria.setVisible(true);
+        vistapizzeria.setLocationRelativeTo(null);
     }
-     public void iniciaControl() {
-//        vistaPrincipal.getMnuPersonas().addActionListener(l -> crudPersonas());
-//        vistaPrincipal.getBtnPersonas().addActionListener(l -> crudPersonas());
-//        vistaPrincipal.getBtnproductos().addActionListener(l -> crudProductos());
-        //vistaPrincipal.getMnuCrear().addActionListener(l-> crudPersonas());
+
+    public void iniciaControl() {
+        vistaPrincipal.getBtnCrear().addActionListener(l -> CrearPizza());
+
+    }
+
+    public void CrearPizza() {
+        
     }
 }
